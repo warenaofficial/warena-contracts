@@ -72,7 +72,7 @@ abstract contract StakeTokenWrapper {
     }
 }
 
-contract DPRRewards is StakeTokenWrapper, IRewardDistributionRecipient {
+contract RenaStakingRewards is StakeTokenWrapper, IRewardDistributionRecipient {
     using SafeERC20 for IERC20;
     using SafeMath for uint256;
     IERC20 public rewardToken; 
