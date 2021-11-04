@@ -2,6 +2,1047 @@
   "version": "3.2",
   "log": [
     {
+      "Ownable": {
+        "src": "@openzeppelin/contracts/access/Ownable.sol:19",
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Ownable",
+            "src": "@openzeppelin/contracts/access/Ownable.sol:27"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Ownable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts/access/Ownable.sol:20"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "src": "@openzeppelin/contracts/token/ERC20/IERC20.sol:8",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Context": {
+        "src": "@openzeppelin/contracts/utils/Context.sol:15",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "RewardsDistribution": {
+        "src": "contracts/distributeReward.sol:7",
+        "version": {
+          "withMetadata": "3d7127d490c6b51e8e432d071b47971524b880e586dfd1d4343a5eca6ac2267e",
+          "withoutMetadata": "e2bb7106fc402ee0138f02a8a9ab2dbb2c30c3b3760655da58728d1061a01959",
+          "linkedWithoutMetadata": "e2bb7106fc402ee0138f02a8a9ab2dbb2c30c3b3760655da58728d1061a01959"
+        },
+        "inherit": [
+          "Ownable",
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "(address,address)",
+          "setRewardAddress(address)",
+          "setAuthority(address)",
+          "distributeReward(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "RewardsDistribution",
+            "src": "contracts/distributeReward.sol:19"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "RewardsDistribution",
+              "label": "authority",
+              "type": "t_address",
+              "src": "contracts/distributeReward.sol:12"
+            },
+            {
+              "contract": "RewardsDistribution",
+              "label": "rewardAddress",
+              "type": "t_address",
+              "src": "contracts/distributeReward.sol:17"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "Ownable": {
+        "src": "@openzeppelin/contracts/access/Ownable.sol:19",
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Ownable",
+            "src": "@openzeppelin/contracts/access/Ownable.sol:27"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Ownable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts/access/Ownable.sol:20"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "src": "@openzeppelin/contracts/token/ERC20/IERC20.sol:8",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeERC20": {
+        "src": "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol:17",
+        "version": {
+          "withMetadata": "db596bc07bac77ccdb7ef2999d73945bf95919a4a74503083c8d2262c8fe6412",
+          "withoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff",
+          "linkedWithoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff"
+        },
+        "inherit": [],
+        "libraries": [
+          "Address"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Address": {
+        "src": "@openzeppelin/contracts/utils/Address.sol:8",
+        "version": {
+          "withMetadata": "fc6b2ef3b837c4b1d839db868702687a97fe65c40ce275bee02093a2c15e16a8",
+          "withoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff",
+          "linkedWithoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "delegatecall",
+            "src": "@openzeppelin/contracts/utils/Address.sol:185"
+          }
+        ],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Context": {
+        "src": "@openzeppelin/contracts/utils/Context.sol:15",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Math": {
+        "src": "@openzeppelin/contracts/utils/math/Math.sol:8",
+        "version": {
+          "withMetadata": "f6622208452312b7b91d841fd6453304656afe8d9dbb51da07d9964959c9a23b",
+          "withoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff",
+          "linkedWithoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeMath": {
+        "src": "@openzeppelin/contracts/utils/math/SafeMath.sol:15",
+        "version": {
+          "withMetadata": "9ca6e33c3e43756b2a4f49874db4df19b7480301fb11a292ecc99ea637e2e0ff",
+          "withoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff",
+          "linkedWithoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IRewardDistributionRecipient": {
+        "src": "contracts/staking_with_lock.sol:19",
+        "inherit": [
+          "Ownable",
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "notifyRewardAmount(uint256)",
+          "setRewardDistribution(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "IRewardDistributionRecipient",
+              "label": "rewardDistribution",
+              "type": "t_address",
+              "src": "contracts/staking_with_lock.sol:20"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "RenaStakingRewards": {
+        "src": "contracts/staking_with_lock.sol:75",
+        "version": {
+          "withMetadata": "075ea8183f8d543a1cfc6325d4d5852bfa12ca564dc7fb75e96809b773168858",
+          "withoutMetadata": "2641865641203fe96560cbeb99451af2af3fca52145605f347dbf53fe9e7ba8a",
+          "linkedWithoutMetadata": "2641865641203fe96560cbeb99451af2af3fca52145605f347dbf53fe9e7ba8a"
+        },
+        "inherit": [
+          "IRewardDistributionRecipient",
+          "Ownable",
+          "Context",
+          "StakeTokenWrapper"
+        ],
+        "libraries": [
+          "SafeERC20",
+          "SafeMath",
+          "Math"
+        ],
+        "methods": [
+          "(address,address)",
+          "lockedUntil(address)",
+          "isUnlocked(address)",
+          "lastTimeRewardApplicable()",
+          "rewardPerToken()",
+          "earned(address)",
+          "stake(uint256)",
+          "withdraw(uint256)",
+          "exit()",
+          "getReward()",
+          "notifyRewardAmount(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "RenaStakingRewards",
+            "src": "contracts/staking_with_lock.sol:95"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "periodFinish",
+            "src": "contracts/staking_with_lock.sol:82"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "rewardRate",
+            "src": "contracts/staking_with_lock.sol:83"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "RenaStakingRewards",
+              "label": "rewardToken",
+              "type": "t_contract(IERC20)181",
+              "src": "contracts/staking_with_lock.sol:78"
+            },
+            {
+              "contract": "RenaStakingRewards",
+              "label": "periodFinish",
+              "type": "t_uint256",
+              "src": "contracts/staking_with_lock.sol:82"
+            },
+            {
+              "contract": "RenaStakingRewards",
+              "label": "rewardRate",
+              "type": "t_uint256",
+              "src": "contracts/staking_with_lock.sol:83"
+            },
+            {
+              "contract": "RenaStakingRewards",
+              "label": "lastUpdateTime",
+              "type": "t_uint256",
+              "src": "contracts/staking_with_lock.sol:84"
+            },
+            {
+              "contract": "RenaStakingRewards",
+              "label": "rewardPerTokenStored",
+              "type": "t_uint256",
+              "src": "contracts/staking_with_lock.sol:85"
+            },
+            {
+              "contract": "RenaStakingRewards",
+              "label": "userRewardPerTokenPaid",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/staking_with_lock.sol:86"
+            },
+            {
+              "contract": "RenaStakingRewards",
+              "label": "rewards",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/staking_with_lock.sol:87"
+            },
+            {
+              "contract": "RenaStakingRewards",
+              "label": "withdrawTime",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/staking_with_lock.sol:88"
+            }
+          ],
+          "types": {
+            "t_contract(IERC20)181": {
+              "label": "contract IERC20"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "StakeTokenWrapper": {
+        "src": "contracts/staking_with_lock.sol:41",
+        "inherit": [],
+        "libraries": [
+          "SafeMath",
+          "SafeERC20"
+        ],
+        "methods": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "stake(uint256)",
+          "withdraw(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "StakeTokenWrapper",
+            "src": "contracts/staking_with_lock.sol:50"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "StakeTokenWrapper",
+              "label": "stakeToken",
+              "type": "t_contract(IERC20)181",
+              "src": "contracts/staking_with_lock.sol:45"
+            },
+            {
+              "contract": "StakeTokenWrapper",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "contracts/staking_with_lock.sol:47"
+            },
+            {
+              "contract": "StakeTokenWrapper",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/staking_with_lock.sol:48"
+            }
+          ],
+          "types": {
+            "t_contract(IERC20)181": {
+              "label": "contract IERC20"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
+      "Ownable": {
+        "src": "@openzeppelin/contracts/access/Ownable.sol:19",
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Ownable",
+            "src": "@openzeppelin/contracts/access/Ownable.sol:27"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "Ownable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin/contracts/access/Ownable.sol:20"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "ERC20": {
+        "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:34",
+        "version": {
+          "withMetadata": "8312288cbde91e536d7a6c1421c7acb275ccf90fa864ca3ec4a671d3c46ce513",
+          "withoutMetadata": "575c5160413ce582addde4a211c5258ab8c1045af2eeee360192553893308724",
+          "linkedWithoutMetadata": "575c5160413ce582addde4a211c5258ab8c1045af2eeee360192553893308724"
+        },
+        "inherit": [
+          "IERC20Metadata",
+          "IERC20",
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "(string,string)",
+          "name()",
+          "symbol()",
+          "decimals()",
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)",
+          "increaseAllowance(address,uint256)",
+          "decreaseAllowance(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "ERC20",
+            "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:53"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "ERC20",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:35"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_allowances",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:37"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:39"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_name",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:41"
+            },
+            {
+              "contract": "ERC20",
+              "label": "_symbol",
+              "type": "t_string_storage",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:42"
+            }
+          ],
+          "types": {
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))"
+            },
+            "t_string_storage": {
+              "label": "string"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20": {
+        "src": "@openzeppelin/contracts/token/ERC20/IERC20.sol:8",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "ERC20Burnable": {
+        "src": "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol:13",
+        "inherit": [
+          "ERC20",
+          "IERC20Metadata",
+          "IERC20",
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "burn(uint256)",
+          "burnFrom(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "IERC20Metadata": {
+        "src": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol:12",
+        "inherit": [
+          "IERC20"
+        ],
+        "libraries": [],
+        "methods": [
+          "name()",
+          "symbol()",
+          "decimals()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeERC20": {
+        "src": "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol:17",
+        "version": {
+          "withMetadata": "db596bc07bac77ccdb7ef2999d73945bf95919a4a74503083c8d2262c8fe6412",
+          "withoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff",
+          "linkedWithoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff"
+        },
+        "inherit": [],
+        "libraries": [
+          "Address"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Address": {
+        "src": "@openzeppelin/contracts/utils/Address.sol:8",
+        "version": {
+          "withMetadata": "fc6b2ef3b837c4b1d839db868702687a97fe65c40ce275bee02093a2c15e16a8",
+          "withoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff",
+          "linkedWithoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "delegatecall",
+            "src": "@openzeppelin/contracts/utils/Address.sol:185"
+          }
+        ],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Context": {
+        "src": "@openzeppelin/contracts/utils/Context.sol:15",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "Math": {
+        "src": "@openzeppelin/contracts/utils/math/Math.sol:8",
+        "version": {
+          "withMetadata": "f6622208452312b7b91d841fd6453304656afe8d9dbb51da07d9964959c9a23b",
+          "withoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff",
+          "linkedWithoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "SafeMath": {
+        "src": "@openzeppelin/contracts/utils/math/SafeMath.sol:15",
+        "version": {
+          "withMetadata": "9ca6e33c3e43756b2a4f49874db4df19b7480301fb11a292ecc99ea637e2e0ff",
+          "withoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff",
+          "linkedWithoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "WarenaToken": {
+        "src": "contracts/Rena.sol:6",
+        "version": {
+          "withMetadata": "507ebd3198eaa2e253824584945032c3ed1e06f5e75b0ff6fe758c691cb209f8",
+          "withoutMetadata": "a8f68f7e202f541c4529377fc190265df7f291b098b387d1c20d63924d2030e7",
+          "linkedWithoutMetadata": "a8f68f7e202f541c4529377fc190265df7f291b098b387d1c20d63924d2030e7"
+        },
+        "inherit": [
+          "ERC20Burnable",
+          "ERC20",
+          "IERC20Metadata",
+          "IERC20",
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "()"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "WarenaToken",
+            "src": "contracts/Rena.sol:7"
+          }
+        ],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1"
+        }
+      },
+      "RewardsDistribution": {
+        "src": "contracts/distributeReward.sol:7",
+        "version": {
+          "withMetadata": "3d7127d490c6b51e8e432d071b47971524b880e586dfd1d4343a5eca6ac2267e",
+          "withoutMetadata": "e2bb7106fc402ee0138f02a8a9ab2dbb2c30c3b3760655da58728d1061a01959",
+          "linkedWithoutMetadata": "e2bb7106fc402ee0138f02a8a9ab2dbb2c30c3b3760655da58728d1061a01959"
+        },
+        "inherit": [
+          "Ownable",
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "(address,address)",
+          "setRewardAddress(address)",
+          "setAuthority(address)",
+          "distributeReward(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "RewardsDistribution",
+            "src": "contracts/distributeReward.sol:19"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "RewardsDistribution",
+              "label": "authority",
+              "type": "t_address",
+              "src": "contracts/distributeReward.sol:12"
+            },
+            {
+              "contract": "RewardsDistribution",
+              "label": "rewardAddress",
+              "type": "t_address",
+              "src": "contracts/distributeReward.sol:17"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "IRewardDistributionRecipient": {
+        "src": "contracts/staking_with_lock.sol:19",
+        "inherit": [
+          "Ownable",
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "notifyRewardAmount(uint256)",
+          "setRewardDistribution(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "contract": "IRewardDistributionRecipient",
+              "label": "rewardDistribution",
+              "type": "t_address",
+              "src": "contracts/staking_with_lock.sol:20"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "RenaStakingRewards": {
+        "src": "contracts/staking_with_lock.sol:75",
+        "version": {
+          "withMetadata": "075ea8183f8d543a1cfc6325d4d5852bfa12ca564dc7fb75e96809b773168858",
+          "withoutMetadata": "2641865641203fe96560cbeb99451af2af3fca52145605f347dbf53fe9e7ba8a",
+          "linkedWithoutMetadata": "2641865641203fe96560cbeb99451af2af3fca52145605f347dbf53fe9e7ba8a"
+        },
+        "inherit": [
+          "IRewardDistributionRecipient",
+          "Ownable",
+          "Context",
+          "StakeTokenWrapper"
+        ],
+        "libraries": [
+          "SafeERC20",
+          "SafeMath",
+          "Math"
+        ],
+        "methods": [
+          "(address,address)",
+          "lockedUntil(address)",
+          "isUnlocked(address)",
+          "lastTimeRewardApplicable()",
+          "rewardPerToken()",
+          "earned(address)",
+          "stake(uint256)",
+          "withdraw(uint256)",
+          "exit()",
+          "getReward()",
+          "notifyRewardAmount(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "RenaStakingRewards",
+            "src": "contracts/staking_with_lock.sol:95"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "periodFinish",
+            "src": "contracts/staking_with_lock.sol:82"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "rewardRate",
+            "src": "contracts/staking_with_lock.sol:83"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "RenaStakingRewards",
+              "label": "rewardToken",
+              "type": "t_contract(IERC20)727",
+              "src": "contracts/staking_with_lock.sol:78"
+            },
+            {
+              "contract": "RenaStakingRewards",
+              "label": "periodFinish",
+              "type": "t_uint256",
+              "src": "contracts/staking_with_lock.sol:82"
+            },
+            {
+              "contract": "RenaStakingRewards",
+              "label": "rewardRate",
+              "type": "t_uint256",
+              "src": "contracts/staking_with_lock.sol:83"
+            },
+            {
+              "contract": "RenaStakingRewards",
+              "label": "lastUpdateTime",
+              "type": "t_uint256",
+              "src": "contracts/staking_with_lock.sol:84"
+            },
+            {
+              "contract": "RenaStakingRewards",
+              "label": "rewardPerTokenStored",
+              "type": "t_uint256",
+              "src": "contracts/staking_with_lock.sol:85"
+            },
+            {
+              "contract": "RenaStakingRewards",
+              "label": "userRewardPerTokenPaid",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/staking_with_lock.sol:86"
+            },
+            {
+              "contract": "RenaStakingRewards",
+              "label": "rewards",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/staking_with_lock.sol:87"
+            },
+            {
+              "contract": "RenaStakingRewards",
+              "label": "withdrawTime",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/staking_with_lock.sol:88"
+            }
+          ],
+          "types": {
+            "t_contract(IERC20)727": {
+              "label": "contract IERC20"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      },
+      "StakeTokenWrapper": {
+        "src": "contracts/staking_with_lock.sol:41",
+        "inherit": [],
+        "libraries": [
+          "SafeMath",
+          "SafeERC20"
+        ],
+        "methods": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "stake(uint256)",
+          "withdraw(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "StakeTokenWrapper",
+            "src": "contracts/staking_with_lock.sol:50"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "contract": "StakeTokenWrapper",
+              "label": "stakeToken",
+              "type": "t_contract(IERC20)727",
+              "src": "contracts/staking_with_lock.sol:45"
+            },
+            {
+              "contract": "StakeTokenWrapper",
+              "label": "_totalSupply",
+              "type": "t_uint256",
+              "src": "contracts/staking_with_lock.sol:47"
+            },
+            {
+              "contract": "StakeTokenWrapper",
+              "label": "_balances",
+              "type": "t_mapping(t_address,t_uint256)",
+              "src": "contracts/staking_with_lock.sol:48"
+            }
+          ],
+          "types": {
+            "t_contract(IERC20)727": {
+              "label": "contract IERC20"
+            },
+            "t_uint256": {
+              "label": "uint256"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)"
+            },
+            "t_address": {
+              "label": "address"
+            }
+          },
+          "layoutVersion": "1.1"
+        }
+      }
+    },
+    {
       "ERC20": {
         "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:34",
         "version": {
