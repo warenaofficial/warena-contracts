@@ -1,2 +1,8 @@
 artifacts/*
 node_modules/
+.env
+.venv
+env/
+venv/
+ENV/
+cache
