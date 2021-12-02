@@ -51,11 +51,11 @@ abstract contract StakeTokenWrapper {
          stakeToken = IERC20(_stakeTokenAddress);
     }
 
-    function totalSupply() public view returns (uint256) {
+    function totalSupply() public virtual view returns (uint256) {
         return _totalSupply;
     }
 
-    function balanceOf(address account) public view returns (uint256) {
+    function balanceOf(address account) public virtual view returns (uint256) {
         return _balances[account];
     }
 
@@ -76,7 +76,7 @@ contract RenaStakingRewards is StakeTokenWrapper, IRewardDistributionRecipient {
     using SafeERC20 for IERC20;
     using SafeMath for uint256;
     IERC20 public rewardToken; 
-    uint256 public constant DURATION = 30 minutes;
+    uint256 public constant DURATION = 5 minutes;
     uint256 public constant LOCK_PERIOD = 5 minutes; // LOCK_PERIOD <= DURATION
 
     uint256 public periodFinish = 0;
@@ -135,6 +135,18 @@ contract RenaStakingRewards is StakeTokenWrapper, IRewardDistributionRecipient {
             );
     }
 
+    function totalSupply() public view override returns (uint256) {
+        return super.totalSupply();
+    } 
+
+    function balanceOf(address account) public view override returns (uint256) {
+        return super.balanceOf(account);
+    }
+
+    function DailyReward() public view returns (uint256) {
+        return rewardPerToken().mul(totalSupply());
+    }
+
     function earned(address account) public view returns (uint256) {
         return
             balanceOf(account)
@@ -178,7 +190,6 @@ contract RenaStakingRewards is StakeTokenWrapper, IRewardDistributionRecipient {
 
     function notifyRewardAmount(uint256 reward)
         external
-        onlyRewardDistribution
         updateReward(address(0))
         override 
     {
