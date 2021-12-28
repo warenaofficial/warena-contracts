@@ -1,7 +1,9 @@
 require("@nomiclabs/hardhat-truffle5");
 require("@nomiclabs/hardhat-ganache");
+require('@nomiclabs/hardhat-ethers');
 // require("@nomiclabs/hardhat-waffle");
 require("@nomiclabs/hardhat-etherscan");
+require('dotenv').config();
 // require('@nomiclabs/hardhat-ethers');
 
 
@@ -45,11 +47,17 @@ module.exports = {
         initialIndex: 0,
         count: 20,
       },
-    }
-    // etherscan: {
-    //   // Your API key for Etherscan
-    //   // Obtain one at https://etherscan.io/
-    //   apiKey: "ZWR4VR8GH45EE7H1QKGKTGNHCI75QYH27N"
-    // }
+    },
+    bsct: {
+      url: `https://speedy-nodes-nyc.moralis.io/7180c6b04212cccaf7fac2d1/bsc/testnet`,
+      accounts: [`${process.env.PRIVATE_KEY}`],
+      // gas: 8100000,
+      gasPrice: 8000000000
+    },
    },
+   etherscan: {
+    // Your API key for Etherscan
+    // Obtain one at https://etherscan.io/
+    apiKey: `${process.env.ETHERSCAN_KEY}`
+  }
 };

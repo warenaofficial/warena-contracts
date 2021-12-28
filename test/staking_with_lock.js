@@ -45,7 +45,7 @@ contract("RenaStakingRewards", (accounts) => {
 
       it("Notification Reward", async function() {
             let accOne = accounts[0];
-            let amount = String(500e18);
+            let amount = String(50e18);
             let notificationReward = await StakingLock.notifyRewardAmount(amount, {from: accOne});
       })
 
